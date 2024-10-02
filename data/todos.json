@@ -2,9 +2,9 @@
 {
     "tasks": [
       { "id": "1",
-       "title": "my fist api project", 
-       "author": "me" },
-      { "id": "2", "title": "Shivani", "author": "Friend" }
+       "title": "my fist api project"
+        },
+      { "id": "2", "title": "Shivani" }
   
     ]
     

@@ -16,13 +16,13 @@ const Task: React.FC<TaskProps> = ({ task }) => {
 
     const [openModalEdit, setOpenModalEdit] = useState<boolean>(false);
     const [openModalDeleted, setOpenModalDeleted] = useState<boolean>(false);
-    const [taskToEdit, setTaskToEdit] = useState<string>(task.text)
+    const [taskToEdit, setTaskToEdit] = useState<string>(task.title)
 
     const handleSubmitEditTodo:FormEventHandler <HTMLFormElement> = async (e) =>{ 
         e.preventDefault();
        await editTodo({
         id: task.id,
-        text: taskToEdit
+        title: taskToEdit
        })
      
         setOpenModalEdit(false);
@@ -40,7 +40,7 @@ const Task: React.FC<TaskProps> = ({ task }) => {
     }
     return (
         <tr key={task.id}>
-            <td className="w-full">{task.text}</td>
+            <td className="w-full">{task.title}</td>
             
 
             <td className=" flex gap-5">
